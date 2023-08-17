@@ -1,0 +1,34 @@
+
+body,
+html {
+  font-family: "Poppins", sans-serif;
+  font-family: "Raleway", sans-serif;
+  background: linear-gradient(
+    135deg,
+    #831e24ff,
+    #000000ff,
+    #501013ff,
+    #0c0a0cff,
+    #0c0102ff
+  );
+  background-size: cover;
+  min-height: 100vh;
+  position: relative;
+  height: max-content;
+}
+
+.login-page {
+  background-image: url("picturePundit.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  position: relative;
+  height: max-content;
+}
+
+.review-form {
+  width: 40%;
+  height: 100px;
+  padding: 10px;
+  border: 3px dashed white;
+}
