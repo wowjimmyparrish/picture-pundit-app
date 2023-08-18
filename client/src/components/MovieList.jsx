@@ -2,6 +2,7 @@ import React from "react";
 import MovieCard from "./MovieCard";
 
 function MovieList({ addReview, filteredMovies }) {
+  console.log(filteredMovies);
   const movieArray = filteredMovies.map((movie) => {
     return <MovieCard key={movie.id} movie={movie} addReview={addReview} />;
   });

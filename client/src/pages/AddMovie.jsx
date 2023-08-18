@@ -1,15 +1,14 @@
-import React, { useState, useContext } from "react";
+import React, { useState} from "react";
 import { useHistory } from "react-router-dom";
-import { MovieContext } from "../context/Movie";
 
-function AddMovie({ setUserMovies, userMovies }) {
+
+function AddMovie({  addMovie }) {
   const [name, setName] = useState("");
   const [genre, setGenre] = useState("");
   const [year, setYear] = useState("");
   const [director, setDirector] = useState("");
   const [imageFile, setImageFile] = useState(null);
-  const { movies, setMovies } = useContext(MovieContext);
-
+ 
   const history = useHistory();
 
   function handleFormSubmit(e) {
@@ -27,19 +26,21 @@ function AddMovie({ setUserMovies, userMovies }) {
     })
       .then((response) => response.json())
       .then((newMovie) => {
-        // Clear form fields
-        setName("");
-        setGenre("");
-        setYear("");
-        setDirector("");
-        setImageFile(null);
+        // // Clear form fields
+        // setName("");
+        // setGenre("");
+        // setYear("");
+        // setDirector("");
+        // setImageFile(null);
 
         // Update movie list in state with the new movie
-        setMovies(...movies, newMovie);
-        setUserMovies(...userMovies, newMovie);
-      });
+        // setMovies([...movies, newMovie]);
+        // setUserMovies([...userMovies, newMovie]);
+        addMovie(newMovie)
 
-    history.push("/");
+      });
+      history.push("/");
+   
   }
 
   return (

@@ -44,9 +44,15 @@ function App() {
     setUserMovies(updatedUserMovies);
   }
 
+  function addMovie(newMovie){
+    setMovies([...movies, newMovie]);
+    setUserMovies([...userMovies, newMovie]);
+  }
+
   const filteredMovies = movies.filter((movie) =>
-    movie.name.toLowerCase().includes(search.toLowerCase())
+  movie.name.toLowerCase().includes(search.toLowerCase())
   );
+
 
   function addReview(newReview) {
     setMovies((prevMovies) => {
@@ -70,7 +76,7 @@ function App() {
             <Home addReview={addReview} filteredMovies={filteredMovies} />
           </Route>
           <Route path="/addmovie">
-            <AddMovie setUserMovies={setUserMovies} userMovies={userMovies} />
+            <AddMovie  addMovie={addMovie} />
           </Route>
           <Route path="/mymovies">
             <MyMovies userMovies={userMovies} deleteMovie={deleteMovie} />
