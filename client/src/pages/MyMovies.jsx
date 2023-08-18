@@ -8,9 +8,9 @@ function MyMovies({ userMovies, deleteMovie }) {
   });
   return (
     <div>
-      <div>
+      
         <ul>{userMovieArray}</ul>
-      </div>
+      
     </div>
   );
 }

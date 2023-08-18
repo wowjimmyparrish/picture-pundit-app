@@ -17,10 +17,11 @@ function Login({ setUserMovies }) {
           <div className="text-center mt-4 text-white">
             <p>
               Don't have an account?
+              </p>
               <div className="pt-2">
                 <button onClick={() => setShowLogin(false)}>Sign Up</button>
               </div>
-            </p>
+            
           </div>
         </div>
       ) : (
