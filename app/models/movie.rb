@@ -8,6 +8,6 @@ class Movie < ApplicationRecord
     validates :genre, presence: true
     validates :year, presence: true
     validates :director, presence: true
-    validates :image_file, presence: true
+    # validates :image_file, presence: true
     
 end

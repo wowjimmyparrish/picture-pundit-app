@@ -13,12 +13,14 @@ function AddMovie({  addMovie }) {
 
   function handleFormSubmit(e) {
     e.preventDefault();
+    console.log("name", name);
     const formData = new FormData();
     formData.append("name", name);
     formData.append("genre", genre);
     formData.append("year", year);
     formData.append("director", director);
     formData.append("image_file", imageFile);
+    
 
     fetch("/movies", {
       method: "POST",
@@ -26,18 +28,15 @@ function AddMovie({  addMovie }) {
     })
       .then((response) => response.json())
       .then((newMovie) => {
-        // // Clear form fields
-        // setName("");
-        // setGenre("");
-        // setYear("");
-        // setDirector("");
-        // setImageFile(null);
-
-        // Update movie list in state with the new movie
-        // setMovies([...movies, newMovie]);
-        // setUserMovies([...userMovies, newMovie]);
-        addMovie(newMovie)
-
+        if (newMovie.status === "error") {
+          console.log("There is an error")
+         
+        }
+        else {
+          addMovie(newMovie)
+        }
+        console.log("new movie", newMovie);
+        
       });
       history.push("/");
    
