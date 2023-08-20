@@ -13,7 +13,6 @@ function AddMovie({  addMovie }) {
 
   function handleFormSubmit(e) {
     e.preventDefault();
-    console.log("name", name);
     const formData = new FormData();
     formData.append("name", name);
     formData.append("genre", genre);
@@ -29,56 +28,66 @@ function AddMovie({  addMovie }) {
       .then((response) => response.json())
       .then((newMovie) => {
         if (newMovie.status === "error") {
-          console.log("There is an error")
-         
+          console.log("There is an error")   
         }
         else {
           addMovie(newMovie)
         }
-        console.log("new movie", newMovie);
-        
       });
       history.push("/");
    
   }
 
   return (
-    <>
-      <form onSubmit={handleFormSubmit}>
-        <h2>Name</h2>
-        <input
-          type="text"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-        />
-        <h2>Genre</h2>
-        <input
-          type="text"
-          value={genre}
-          onChange={(e) => setGenre(e.target.value)}
-        />
-        <h2>Year</h2>
-        <input
-          type="text"
-          value={year}
-          onChange={(e) => setYear(e.target.value)}
-        />
-        <h2>Director</h2>
-        <input
-          type="text"
-          value={director}
-          onChange={(e) => setDirector(e.target.value)}
-        />
-        <h2>Image</h2>
-        <input
-          type="file"
-          accept="image/*"
-          onChange={(e) => setImageFile(e.target.files[0])}
-        />
-        <button type="submit">Add Movie</button>
-      </form>
-    </>
-  );
+    <div className="w-25 position-absolute top-50 start-50 translate-middle">
+    <form >
+      <input
+        className="input form-control"
+        type="text"
+        placeholder="Name"
+        value={name}
+        onChange={(e) => setName(e.target.value)}
+      />
+      <input
+        className="input form-control"
+        type="text"
+        placeholder="Genre"
+        value={genre}
+        onChange={(e) => setGenre(e.target.value)}
+      />
+      <input
+        className="input form-control"
+        type="text"
+        placeholder="Year"
+        value={year}
+        onChange={(e) => setYear(e.target.value)}
+      />
+      <input
+        className="input form-control"
+        type="text"
+        placeholder="Director"
+        value={director}
+        onChange={(e) => setDirector(e.target.value)}
+      />
+      <div className="mb-2 pt-2">
+      <input
+        className="form-control"
+        type="file"
+        accept="image/*"
+        onChange={(e) => setImageFile(e.target.files[0])}
+      />
+      </div>
+      <button
+        className="ms-2 "
+        type="submit"
+        disabled={!name || !genre || !year || !director || !imageFile}
+        onClick={handleFormSubmit}
+      >
+        Add Movie
+      </button>
+    </form>
+  </div>
+);
 }
 
 export default AddMovie;

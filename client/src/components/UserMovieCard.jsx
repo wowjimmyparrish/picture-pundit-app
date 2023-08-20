@@ -14,16 +14,15 @@ function UserMovieCard({ movie, deleteMovie }) {
       }
     });
   }
+
   return (
-    <div>
-      <div>
-        <h2>{movie.name}</h2>
-        <p>{movie.year}</p>
-        <p>{movie.genre}</p>
-        <p>{movie.director}</p>
-      </div>
-      <div>
-        <button onClick={handleDelete} type="submit">
+    <div className="card mt-3 w-25 mt-5">
+      <div className="card-body">
+        <h2 className="card-title">{movie.name}</h2>
+        <p className="card-text">Year: {movie.year}</p>
+        <p className="card-text">Genre: {movie.genre}</p>
+        <p className="card-text">Director: {movie.director}</p>
+        <button onClick={handleDelete}>
           Delete
         </button>
       </div>
