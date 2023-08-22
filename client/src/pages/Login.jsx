@@ -1,6 +1,7 @@
 import { useState } from "react";
 import LoginForm from "../components/LoginForm";
 import SignupForm from "../components/SignupForm";
+import Button from 'react-bootstrap/Button'
 function Login({ setUserMovies }) {
   const [showLogin, setShowLogin] = useState(true);
 
@@ -19,7 +20,7 @@ function Login({ setUserMovies }) {
               Don't have an account?
               </p>
               <div className="pt-2">
-                <button onClick={() => setShowLogin(false)}>Sign Up</button>
+                <Button variant="outline-light" onClick={() => setShowLogin(false)}>Sign Up</Button>{' '}
               </div>
             
           </div>
@@ -31,7 +32,7 @@ function Login({ setUserMovies }) {
             <p>
               Already have an account?
               <div className="pt-2">
-                <button onClick={() => setShowLogin(true)}>Log In</button>
+              <Button variant="outline-light" onClick={() => setShowLogin(true)}>Log In</Button>{' '}
               </div>
             </p>
           </div>

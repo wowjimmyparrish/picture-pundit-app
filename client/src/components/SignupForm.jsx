@@ -1,6 +1,6 @@
 import React, { useState, useContext } from "react";
 import { UserContext } from "../context/User";
-
+import Button from "react-bootstrap/esm/Button";
 function SignupForm() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
@@ -59,12 +59,12 @@ function SignupForm() {
         onChange={(e) => setPasswordConfirmation(e.target.value)}
       />
       <div className="pt-2">
-        <button type="submit">Submit</button>
+        <Button type="submit" variant="outline-light">Submit</Button>
       </div>
       {errors.length > 0 && (
-        <ul style={{ color: "red" }}>
+        <ul style={{ color: "white" }}>
           {errors.map((error) => (
-            <li key={error}>{error}</li>
+            <p key={error}>{error}</p>
           ))}
         </ul>
       )}

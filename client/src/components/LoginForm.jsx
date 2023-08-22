@@ -1,7 +1,7 @@
 import React, { useState, useContext } from "react";
 import { UserContext } from "../context/User";
 import { useHistory } from "react-router-dom";
-
+import Button from "react-bootstrap/esm/Button";
 function LoginForm({ setUserMovies }) {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
@@ -51,9 +51,9 @@ function LoginForm({ setUserMovies }) {
         onChange={(e) => setPassword(e.target.value)}
       />
       <div className="pt-2">
-        <button type="submit">Login</button>
+        <Button type="submit" variant="outline-light">Login</Button>
       </div>
-      <p style={{ color: "red" }}>{errors}</p>
+      <p style={{ color: "white" }}>{errors}</p>
     </form>
   );
 }
