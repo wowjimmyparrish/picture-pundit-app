@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import { NavLink } from "react-router-dom";
 import { UserContext } from "../context/User";
 import MovieFilter from "./MovieFilter";
+import Button from 'react-bootstrap/Button'
 function NavBar({ setSearch }) {
   const { user, setUser } = useContext(UserContext);
 
@@ -36,9 +37,7 @@ function NavBar({ setSearch }) {
           <div className="pe-2 ps-2 ">
             <MovieFilter setSearch={setSearch} />
           </div>
-          <button className="me-2" onClick={handleLogout}>
-            Logout
-          </button>
+          <Button className="me-2" variant="outline-light" onClick={handleLogout}>Logout</Button>{' '}
         </div>
       </div>
     </div>

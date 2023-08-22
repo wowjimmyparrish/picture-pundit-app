@@ -13,6 +13,7 @@ function Search({ setSearch }) {
   }
 
   return (
+    
     <form onSubmit={handleSubmit}>
       <input
         type="text"
@@ -22,6 +23,7 @@ function Search({ setSearch }) {
       />
       <button type="submit">🔍</button>
     </form>
+    
   );
 }
 

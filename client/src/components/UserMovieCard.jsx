@@ -1,4 +1,5 @@
 import React from "react";
+import Button from 'react-bootstrap/Button'
 
 function UserMovieCard({ movie, deleteMovie }) {
   const requestOptions = {
@@ -22,9 +23,7 @@ function UserMovieCard({ movie, deleteMovie }) {
         <p className="card-text">Year: {movie.year}</p>
         <p className="card-text">Genre: {movie.genre}</p>
         <p className="card-text">Director: {movie.director}</p>
-        <button onClick={handleDelete}>
-          Delete
-        </button>
+        <Button onClick={handleDelete} variant="outline-dark">Delete</Button>{' '}
       </div>
     </div>
   );
