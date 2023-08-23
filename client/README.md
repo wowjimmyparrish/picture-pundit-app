@@ -1,70 +1,36 @@
-# Getting Started with Create React App
+# Picture Pundit
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Picture Pundit is a full stack application that allows logged-in users to view, search, review, and post their favorite or most hated movies. This repository contains the code for the Picture Pundit application.
 
-## Available Scripts
+## Built With
 
-In the project directory, you can run:
+- React
+- Ruby on Rails
+- Bootstrap
+- Ruby Active Storage
+- AWS S3
 
-### `npm start`
+## Installation Instructions
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+To get started with Picture Pundit, follow the instructions below:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- Fork this repository to your GitHub account.
+- Clone the forked repository to your local machine.
+- Install the necessary npm packages and gems by running the following commands in the project folder:
+- npm install to install the required npm packages.
+- bundle install to install the required gems.
+- Start the server by running rails s in the console.
+- In a separate console, run npm start --prefix client to start the front-end and view the application in your browser.
 
-### `npm test`
+## Deployed Project
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+The deployed version Picture Pundit can be accessed at the following URL:
+https://picture-pundit-app.onrender.com
 
-### `npm run build`
+## How to Use
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Sign up by creating a username and password. If you already have an account, you can log in using your credentials.
+- Once logged in, you can scroll through all the movies that users have created.
+- To post a review for a movie, type into the review input under the movie and click submit.
+- To post a movie, click the "Upload Movie" tab in the navigation bar.
+- You can view and delete any video you have created by clicking on "My Videos" the navigation bar.
