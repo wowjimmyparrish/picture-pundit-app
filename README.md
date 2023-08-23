@@ -1,24 +1,36 @@
-# README
+# Picture Pundit
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Picture Pundit is a full stack application that allows logged-in users to view, search, review, and post their favorite or most hated movies. This repository contains the code for the Picture Pundit application.
 
-Things you may want to cover:
+## Built With
 
-* Ruby version
+- React
+- Ruby on Rails
+- Bootstrap
+- Ruby Active Storage
+- AWS S3
 
-* System dependencies
+## Installation Instructions
 
-* Configuration
+To get started with Picture Pundit, follow the instructions below:
 
-* Database creation
+- Fork this repository to your GitHub account.
+- Clone the forked repository to your local machine.
+- Install the necessary npm packages and gems by running the following commands in the project folder:
+- npm install to install the required npm packages.
+- bundle install to install the required gems.
+- Start the server by running rails s in the console.
+- In a separate console, run npm start --prefix client to start the front-end and view the application in your browser.
 
-* Database initialization
+## Deployed Project
 
-* How to run the test suite
+The deployed version Picture Pundit can be accessed at the following URL:
+https://picture-pundit-app.onrender.com
 
-* Services (job queues, cache servers, search engines, etc.)
+## How to Use
 
-* Deployment instructions
-
-* ...
+- Sign up by creating a username and password. If you already have an account, you can log in using your credentials.
+- Once logged in, you can scroll through all the movies that users have created.
+- To post a review for a movie, type into the review input under the movie and click submit.
+- To post a movie, click the "Upload Movie" tab in the navigation bar.
+- You can view and delete any video you have created by clicking on "My Videos" the navigation bar.
