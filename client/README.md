@@ -1,4 +1,4 @@
-# Picture Pundit
+
 
 Picture Pundit is a full stack application that allows logged-in users to view, search, review, and post their favorite or most hated movies. This repository contains the code for the Picture Pundit application.
 
